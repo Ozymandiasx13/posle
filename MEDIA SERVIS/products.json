@@ -1,0 +1,116 @@
+{
+    "items": [
+      {
+        "sys": { "id": "1" },
+        "fields": {
+          "title": "Krstarenje Galaksijom Avenuom 6",
+          "price": 55000.00,
+          "image": {
+            "fields": {
+              "file": {
+                "url": "FotkeK/Avian6.jpg"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": { "id": "2" },
+        "fields": {
+          "title": "Krstarenje Sunčevim sustavom",
+          "price": 6000.00,
+          "image": {
+            "fields": {
+              "file": {
+                "url": "FotkeK/Cruiser4.png"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": { "id": "3" },
+        "fields": {
+          "title": "Krstarenje Haleyevim putem u Titaniku x7",
+          "price": 16000.00,
+          "image": {
+            "fields": {
+              "file": {
+                "url": "FotkeK/titanicx7.png"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": { "id": "4" },
+        "fields": {
+          "title": "Odmor nad zemljom BarKlin Nahajo hotelu s 12 zvjezdica",
+          "price": 8000.00,
+          "image": {
+            "fields": {
+              "file": {
+                "url": "FotkeK/Hotel1.jpg"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": { "id": "5" },
+        "fields": {
+          "title": "Posjet Corusantu",
+          "price": 9500.00,
+          "image": {
+            "fields": {
+              "file": {
+                "url": "FotkeK/Corusant3.jpg"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": { "id": "6" },
+        "fields": {
+          "title": "Kamino resort 6",
+          "price": 20000.00,
+          "image": {
+            "fields": {
+              "file": {
+                "url": "FotkeK/Kamino.jpg"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": { "id": "7" },
+        "fields": {
+          "title": "Odmor na Naboou",
+          "price": 9000.00,
+          "image": {
+            "fields": {
+              "file": {
+                "url": "FotkeK/Naboo.jpg"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": { "id": "8" },
+        "fields": {
+          "title": "Avantura na Pandori",
+          "price": 14000.00,
+          "image": {
+            "fields": {
+              "file": {
+                "url": "FotkeK/Pandora1.jpg"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }

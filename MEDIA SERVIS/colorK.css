@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px
+  }
+
+  html{
+    scroll-behavior: smooth;
+}
+
+a{
+text-decoration: none;
+}
+ul{
+
+list-style:none;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between; 
+    align-items: right;
+    height: 10vh;
+    background-color: darkcyan;
+}
+.logo{
+padding-left: 2em;
+padding-top: 2em;
+}
+.logo-text{
+    font-size:3em
+}
+.menubar{
+width: 50%;
+margin-left: 30em;
+margin-bottom: 1em;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+
+}
+.list-items a{
+padding:1.5em;
+color: rgb(254, 254, 254);
+border: 2px solid black;
+font-family: sans-serif;
+background: #733d1300;
+font-size: 1.1em;
+transition: 0.4s;
+position: relative;
+bottom: 120%;
+}
+.list-items a:hover{
+    background-color:rgb(8, 77, 157)
+}
+.cart{
+    padding-right: 1em;
+    display: none;
+    position: fixed; 
+}
+
+.cart .number-of-items{
+    display: none;
+cursor: pointer;
+justify-content: center;
+align-items: center;
+color: white;
+position: absolute;
+left: 1220px;
+top:7px;
+background-color: #e3762d;
+height: 25px;
+width: 25px;
+border-radius: 7px;
+}
+.number-of-items .noi{
+    display: none;
+    font-size: 0.7em;
+}
+.fa-shopping-cart{
+    display: none;
+    font-size: 2em;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center; 
+    position: fixed;
+    margin-left: 30em;
+    margin-top: 0.5em;
+
+}
+.burger{
+    height: 40px;
+    width: 40px;
+    display: none;
+}
+.layer1,.layer2,.layer3{
+    background: black;
+    height: 20px;
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 20px;
+}
+.section1{
+    float: inline-end;
+    height: calc(100vh - 50vh);
+    width: 50%;
+    background: url("FotkeK/Cruiser.avif") center center/cover;
+    border:5px solid darkcyan;
+    top:0;
+    left:0;
+    z-index: 8;
+    
+}
+.section1 .banner{
+height: 200px;
+width: 600px;
+background:rgba(255, 255, 255, 0,7);
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+position: relative;
+justify-content: space-around;
+flex-direction: column;
+text-align: center;
+align-items: center;
+font-family: sans-serif;
+z-index:  8;
+}
+.section3{
+    float: inline-end;
+    height: calc(100vh - 50vh);
+    width: 50%;
+    position: relative;
+    background: url("FotkeK/Cruiser3.png") center center/cover;
+    border: 5px solid darkcyan;
+    top:0;
+    left:0%;
+    z-index: 8;
+    
+}
+.section3 .banner{
+height: 200px;
+width: 600px;
+background:rgba(255, 255, 255, 0,7);
+top: 50%;
+left:50%;
+transform: translate(-50%,-50%);
+position:relative;
+justify-content: space-around;
+flex-direction: column;
+text-align: center;
+align-items: center;
+font-family: sans-serif;
+z-index:  8;
+}
+.section4{
+    float: left;
+    height:calc(100vh - 50vh);
+    width: 50%;
+    border: 5px solid darkcyan;
+    position: relative;
+    background: url("FotkeK/Cruiser2.webp") center center/cover;
+    top:0;
+    left:0;
+    z-index: 8;
+}
+.section4 .banner{
+height: 200px;
+width: 600px;
+background:rgba(255, 255, 255, 0,7);
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+position: relative;
+justify-content: space-around;
+flex-direction: column;
+text-align: center;
+align-items: center;
+font-family: sans-serif;
+z-index:  8;
+
+}
+.section5 {
+    float: inline-end;
+    position: inherit;
+    height: calc(100vh - 50vh);
+    width: 50%;
+    border: 5px solid darkcyan;
+    background: url("FotkeK/hotel1.webp") center center/cover;
+    top:0;
+    left:0;
+    z-index: 8;}
+    
+.section5 .banner{
+height: 200px;
+width: 600px;
+background:rgba(255, 255, 255, 0,7);
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+position: relative;
+justify-content: space-around;
+flex-direction: column;
+text-align: center;
+align-items: center;
+font-family: sans-serif;
+z-index:  8;
+}
+.banner h1{
+font-size: 2em;
+background: #23464688;
+color: #f5efef;
+font-family: fantasy;
+}
+.banner a{
+    display: flex;
+    justify-content: center;
+    padding: 1em 2.5em;
+    font-size: 1em;
+    color: rgb(230, 229, 228);
+    background: #256c74;
+    transition: all 0.3s;
+}
+.banner a:hover{
+    background-color:rgb(7, 60, 117)
+}
+
+
+/*menubar*/
+.menu-sidebar{
+    display: none;
+}
+.cart-sidebar{
+    display: none;
+    background: #d1e4e4;
+    border: 4px solid black;
+    position:fixed;
+    right: 0;
+    top: 0;
+    width: 500px;
+    height: 100vh;
+    z-index: 10;
+    transition:all 0.3s linear;
+    transform: translateX(100%);
+    overflow: scroll;
+}
+
+.cart-sidebar  .cart{
+padding: 0;
+}
+.cart .close-cart{
+    font-size: 1.7em;
+    color: darkcyan;
+    padding: 1em;
+    cursor: pointer;
+    margin-right: 7.5em;
+    position: relative;
+   right :4em;
+}
+.fa-times{
+margin-top: 0,5em;
+margin-left: 3em;
+}
+.cart h2{
+    text-align:center;
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+    font-family: verdana;
+}
+.cart-product .product image img{
+    width: 130px;
+height: 90px;
+}
+.cart-product-content{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    margin-left: 1em;
+    height: 80px;
+    position:fixed ;
+}
+.plus-minus{
+    display: flex;
+    transform: rotate(90deg);
+    color: black;
+    font-size: 1,5em;
+    cursor: pointer;
+    position:fixed ;
+}
+.total-sum{
+    text-align:center;
+    margin: 1em 0 0.5em 0;
+    border: 2px solid black;
+    background: #079e9e;
+    padding: 1em;
+    color: white;
+}
+.clear-cart{
+    text-align: center;
+}
+.clear-cart.btn{
+    background-color: black(13, 111, 167);
+    color: darkcyan(242, 245, 245);
+    border: 1px solid black;
+    padding: 0.5em 0.7em;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+.clear-cart .btn a:hover{
+    border: 1px solid darkcyan;
+    background: darkcyan;
+    color: rgb(0, 79, 139);
+}
+.clear-cart-.btn{
+        background: darkcyan(13, 111, 167);
+        color: darkcyan(242, 245, 245);
+        border: 1px solid black;
+        padding: 0.5em 0.7em;
+        cursor: pointer;
+        transition: 0.3s linear;
+    }
+
+.overlay{
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 10%;
+    background-color: transparent;
+    opacity: 0,3;
+    transition: all 0.3s linear;
+}
+
+.none{
+    display: none;
+}
+@media screen and (max-width:768px){
+    .logo{
+        padding-left: 0;
+    }
+    .cart{
+        padding-right: 2em;
+    }
+    .menubar{
+        display: none;
+    }
+    .burger{
+        margin-left: 2em;
+        display: block;
+    }
+    .section1 .banner h1{
+        font-size: 1.5em;
+    }
+    .banner a{
+        font-size: 0.6em;
+        padding: 1em,2em;
+    }
+    .section2 .title h1{
+        font-size: 1,5em;
+    }
+    .menu-sidebar{
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 11;
+        background: #f5efef;
+        overflow: hidden;
+        transform: translate(-100%);
+        transition: 0,3s linear;
+    }
+    .menu-menubar{
+        display: flex;
+        height: 80%;
+        justify-content: center;
+    }
+    .menu-list{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .menu-sidebar .close-menu{
+        position: absolute;
+        right: 30px;
+        font-size: 1,4em;
+    }
+    .menu-list-items a{
+        color: #0a808f;
+    }
+    .menu-list-items a:hover{
+        color: aqua;
+    }
+}
