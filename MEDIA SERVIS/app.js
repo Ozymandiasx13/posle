@@ -1,13 +1,9 @@
 let products = [];
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Ensure cart data is initialized in localStorage
-    if (!localStorage.getItem('cart')) {
-        localStorage.setItem('cart', JSON.stringify([]));
-    }
-    
     loadProducts();
     setupCart();
+    displayCartItems(); // Display cart items when the page loads
 });
 
 async function loadProducts() {
@@ -66,11 +62,7 @@ function setupCart() {
         localStorage.removeItem('cart');
         // Clear cart content, total, and cart count
         displayCartItems();
-        updateTotal();
-        updateCartCount();
     });
-
-    // Removed displayCartItems, updateTotal, and updateCartCount from here
 
     // Setup event listeners for plus and minus buttons
     setupPlusMinusButtons();
@@ -78,21 +70,16 @@ function setupCart() {
 
 function addToCart(id) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const itemExists = cart.some(item => item.id === id);
+    const item = cart.find(item => item.id === id);
 
-    if (itemExists) {
-        cart = cart.map(item => {
-            if (item.id === id) item.quantity += 1;
-            return item;
-        });
+    if (item) {
+        item.quantity += 1;
     } else {
         cart.push({ id, quantity: 1 });
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
     displayCartItems();
-    updateTotal();
-    updateCartCount();
 }
 
 // Other cart manipulation functions (removeFromCart, decreaseQuantity) should also update localStorage
@@ -154,4 +141,15 @@ function setupPlusMinusButtons() {
     const plusMinusButtons = document.querySelectorAll('.plus-minus');
 
     plusMinusButtons.forEach(button => {
-        button
+        button.addEventListener('click', () => {
+            const id = button.dataset.id;
+            const action = button.dataset.action;
+
+            if (action === 'increase') {
+                addToCart(id);
+            } else if (action === 'decrease') {
+                decreaseQuantity(id);
+            }
+        });
+    });
+}
