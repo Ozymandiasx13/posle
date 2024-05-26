@@ -68,6 +68,8 @@ display: flex;
 cursor: pointer;
 justify-content: center;
 align-items: center;
+    border:1px;
+    border-color:black;
 color: white;
 position: absolute;
 left: 1220px;
