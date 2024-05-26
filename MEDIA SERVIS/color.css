@@ -55,7 +55,8 @@ ul {
     font-size: 1.1em;
     transition: 0.4s;
     position: relative;
-    bottom: 120%;
+    bottom: 5em;    
+    z-index: 11;
 }
 
 .list-items a:hover {
