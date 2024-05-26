@@ -55,7 +55,7 @@ ul {
     font-size: 1.1em;
     transition: 0.4s;
     position: relative;
-    bottom:120%;
+    bottom: 120%;
 }
 
 .list-items a:hover {
@@ -67,20 +67,22 @@ ul {
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 100;
+    z-index: 100
 }
 
-.number-of-items {
+.cart .number-of-items {
     display: flex;
     cursor: pointer;
     justify-content: center;
     align-items: center;
     color: white;
-    position: absolute;
+    position: fixed;
+    top: 50px;
+    right: 490px;
     background-color: #e3762d;
     height: 25px;
     width: 25px;
-    border-radius: 50%;
+    border-radius: 7px;
     z-index: 1;
 }
 
@@ -92,9 +94,10 @@ ul {
     font-size: 2em;
     cursor: pointer;
     position: fixed;
-    right: 500px;
-    top: 50px;
+    right:500px;
+    top :50px;
 }
+
 
 .burger {
     height: 40px;
@@ -137,8 +140,7 @@ ul {
 .banner h1 {
     font-size: 3em;
     color: #f5efef;
-    font-family: sans-serif;
-    border: black;
+    font-family: fantasy;
 }
 
 .banner a {
@@ -184,7 +186,6 @@ ul {
 .product-container {
     display: flex;
     flex-wrap: wrap;
-    top: 1em;
     justify-content: space-around;
     align-items: flex-start;
 }
@@ -365,7 +366,6 @@ ul {
 .none {
     display: none;
 }
-
 @media screen and (max-width: 768px) {
     .logo {
         padding-left: 0;
@@ -385,4 +385,45 @@ ul {
     }
     .banner a {
         font-size: 0.6em;
-        padding: 1
+        padding: 1em, 2em;
+    }
+    .section2 .title h1 {
+        font-size: 2em;
+    }
+    .menu-sidebar {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 11;
+        background: #f5efef;
+        overflow: hidden;
+        transform: translate(-100%);
+        transition: 0.3s linear;
+    }
+    .menu-menubar {
+        display: flex;
+        height: 80%;
+        justify-content: center;
+    }
+    .menu-list {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .menu-sidebar .close-menu {
+        position: absolute;
+        right: 30px;
+        font-size: 1.4em;
+    }
+    .menu-list-items a {
+        color: #0a808f;
+    }
+    .menu-list-items a:hover {
+        color: aqua;
+    }
+}
