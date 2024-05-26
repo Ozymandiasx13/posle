@@ -55,7 +55,8 @@ ul {
     font-size: 1.1em;
     transition: 0.4s;
     position: relative;
-    bottom: 120%;
+    bottom: 5em;    
+    z-index: 11;
 }
 
 .list-items a:hover {
@@ -143,8 +144,8 @@ display: inline-flex;
 
 .banner h1 {
     font-size: 5em;
-    color: #f5efef;
-    font-family: verdanA;
+    color: BLACK;
+    font-family: fantasy;
 }
 
 .banner a {
