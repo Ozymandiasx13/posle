@@ -289,8 +289,7 @@ ul {
     margin-bottom: 4em;
     margin-right: 11em;
     font-size: 1.1em;
-    font-family: verdana;
-}
+    font-family: verdana;}
 
 .cart-content {
     margin-top: 20px;
@@ -317,15 +316,6 @@ ul {
     font-size: 1em;
     cursor: pointer;
     padding: 0.5em;
-    margin: 0.5em;
-    border: 1px solid #ddd;
-    background: #fff;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-.plus-minus:hover {
-    background: #f0f0f0;
 }
 
 .total-sum {
@@ -349,6 +339,12 @@ ul {
     height: 3em;
     cursor: pointer;
     transition: 0.3s linear;
+
+}
+.continue-cart{
+    position: relative;
+    top: 2em;
+
 }
 
 .clear-cart .btn:hover {
@@ -357,19 +353,14 @@ ul {
     color: rgb(0, 79, 139);
 }
 
-.continue-cart {
-    position: relative;
-    top: 2em;
-}
-
 .overlay {
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    width: 10%;
+    background-color: transparent;
     opacity: 0.3;
     transition: all 0.3s linear;
 }
