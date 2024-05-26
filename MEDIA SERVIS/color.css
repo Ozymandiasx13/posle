@@ -77,8 +77,8 @@ ul {
     align-items: center;
     color: white;
     position: fixed;
-    top: -10px; /* Adjust top position */
-    right: -10px; /* Adjust right position */
+    top: 50px; /* Adjust top position */
+    right: 500px; /* Adjust right position */
     background-color: #e3762d;
     height: 25px;
     width: 25px;
