@@ -47,7 +47,7 @@ ul {
 }
 
 .list-items a {
-    padding: 0.5em;
+    padding: 1.5em;
     color: rgb(254, 254, 254);
     border: 2px solid black;
     font-family: sans-serif;
@@ -55,8 +55,7 @@ ul {
     font-size: 1.1em;
     transition: 0.4s;
     position: relative;
-    bottom: 5em;    
-    z-index: 11;
+    bottom: 120%;
 }
 
 .list-items a:hover {
@@ -77,13 +76,13 @@ ul {
     justify-content: center;
     align-items: center;
     color: white;
-     position: fixed;
-    right: 500px;
-    top: 50px;
+    position: absolute;
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
     background-color: #e3762d;
     height: 25px;
     width: 25px;
-    border-radius: 7px;
+    border-radius: 50%; /* Make it circular */
     z-index: 1;
 }
 
@@ -397,4 +396,4 @@ ul {
     }
     .banner a {
         font-size: 0.6em;
-        padding: 1}
+        padding: 1
