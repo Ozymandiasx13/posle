@@ -77,7 +77,7 @@ ul {
     justify-content: center;
     align-items: center;
     color: white;
-    position: absolute;
+    position: fixed;
     top: -10px; /* Adjust top position */
     right: -10px; /* Adjust right position */
     background-color: #e3762d;
