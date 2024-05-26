@@ -3,9 +3,6 @@ let products = [];
 document.addEventListener("DOMContentLoaded", () => {
     loadProducts();
     setupCart();
-    displayCartItems(); // Display cart items when the page loads
-    updateTotal(); // Update total sum when the page loads
-    updateCartCount(); // Update number of items when the page loads
 });
 
 async function loadProducts() {
@@ -68,6 +65,10 @@ function setupCart() {
         updateCartCount();
     });
 
+    displayCartItems();
+    updateTotal();
+    updateCartCount();
+
     // Setup event listeners for plus and minus buttons
     setupPlusMinusButtons();
 }
@@ -124,7 +125,7 @@ function displayCartItems() {
 
     // Update total and cart count
     updateTotal();
-    updateCartCount();
+    updateCartCount(); // Move the updateCartCount() call here
 }
 
 function updateTotal() {
