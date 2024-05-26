@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loadProducts();
     setupCart();
     displayCartItems(); // Display cart items when the page loads
+    updateTotal(); // Update total sum when the page loads
+    updateCartCount(); // Update number of items when the page loads
 });
 
 async function loadProducts() {
@@ -62,6 +64,8 @@ function setupCart() {
         localStorage.removeItem('cart');
         // Clear cart content, total, and cart count
         displayCartItems();
+        updateTotal();
+        updateCartCount();
     });
 
     // Setup event listeners for plus and minus buttons
@@ -70,16 +74,21 @@ function setupCart() {
 
 function addToCart(id) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const item = cart.find(item => item.id === id);
+    const itemExists = cart.some(item => item.id === id);
 
-    if (item) {
-        item.quantity += 1;
+    if (itemExists) {
+        cart = cart.map(item => {
+            if (item.id === id) item.quantity += 1;
+            return item;
+        });
     } else {
         cart.push({ id, quantity: 1 });
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
     displayCartItems();
+    updateTotal();
+    updateCartCount();
 }
 
 // Other cart manipulation functions (removeFromCart, decreaseQuantity) should also update localStorage
