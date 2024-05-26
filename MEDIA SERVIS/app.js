@@ -148,3 +148,12 @@ function updateTotal() {
 
     totalSum.textContent = total.toFixed(2);
 }
+function displayCartItems() {
+    const cartContent = document.querySelector('.cart-content');
+    cartContent.innerHTML = '';
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const numberOfItems = cart.length;
+
+    const numberOfItemsDisplay = document.querySelector('.number-of-items .noi');
+    numberOfItemsDisplay.textContent = numberOfItems;
+}
