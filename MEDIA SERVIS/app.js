@@ -3,6 +3,8 @@ let products = [];
 document.addEventListener("DOMContentLoaded", () => {
     loadProducts();
     setupCart();
+    updateTotal();
+    updateCartCount();
 });
 
 async function loadProducts() {
@@ -64,9 +66,6 @@ function setupCart() {
     });
 
     displayCartItems();
-    updateTotal();
-    updateCartCount();
-
     setupPlusMinusButtons();
 }
 
@@ -178,4 +177,3 @@ function setupPlusMinusButtons() {
             }
         });
     });
-}
