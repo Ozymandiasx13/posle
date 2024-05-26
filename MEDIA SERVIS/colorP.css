@@ -215,6 +215,8 @@ z-index:  8;
 .banner h1{
 font-size: 3em;
 background: #23464688;
+    border:1px;
+    border-color:black;
 color: #f5efef;
 font-family: fantasy;
 }
