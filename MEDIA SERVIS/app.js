@@ -27,7 +27,6 @@ async function loadProducts() {
         productContainer.appendChild(productDiv);
     });
 
-    // Setup event listeners for the "Add to Cart" buttons
     setupAddToCartButtons();
 }
 
@@ -46,13 +45,13 @@ function setupCart() {
     const cartSidebar = document.querySelector('.cart-sidebar');
     const closeCartButton = document.querySelector('.close-cart');
     const clearCartButton = document.querySelector('.clear-cart-btn');
-    const cartIcon = document.querySelector('.number-of-items .noi');
-    
+    const cartIcon = document.querySelector('.fa-shopping-cart');
+
     closeCartButton.addEventListener('click', () => {
         cartSidebar.style.transform = 'translateX(100%)';
     });
-    
-    document.querySelector('.fa-shopping-cart').addEventListener('click', () => {
+
+    cartIcon.addEventListener('click', () => {
         cartSidebar.style.transform = 'translateX(0)';
         displayCartItems();
     });
@@ -68,10 +67,6 @@ function setupCart() {
     updateTotal();
     updateCartCount();
 
-    // Setup cart count
-    updateCartCount();
-
-    // Setup event listeners for plus and minus buttons
     setupPlusMinusButtons();
 }
 
@@ -96,11 +91,7 @@ function addToCart(id) {
 
 function removeFromCart(id) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const index = cart.findIndex(item => item.id === id);
-
-    if (index !== -1) {
-        cart.splice(index, 1);
-    }
+    cart = cart.filter(item => item.id !== id);
 
     localStorage.setItem('cart', JSON.stringify(cart));
     displayCartItems();
@@ -110,14 +101,12 @@ function removeFromCart(id) {
 
 function decreaseQuantity(id) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const index = cart.findIndex(item => item.id === id);
-
-    if (index !== -1) {
-        cart[index].quantity -= 1;
-        if (cart[index].quantity <= 0) {
-            cart.splice(index, 1);
+    cart = cart.map(item => {
+        if (item.id === id) {
+            item.quantity -= 1;
         }
-    }
+        return item;
+    }).filter(item => item.quantity > 0);
 
     localStorage.setItem('cart', JSON.stringify(cart));
     displayCartItems();
@@ -138,19 +127,20 @@ function displayCartItems() {
 
         cartDiv.innerHTML = `
             <img src="${item.fields.image.fields.file.url}" alt="${item.fields.title}">
-            <h4>${item.fields.title}</h4>
-            <p>€${item.fields.price.toFixed(2)}</p>
-            <p>Broj osoba: 
-                <button class="plus-minus" data-id="${item.sys.id}" data-action="decrease">-</button>
-                ${cartItem.quantity}
-                <button class="plus-minus" data-id="${item.sys.id}" data-action="increase">+</button>
-            </p>
+            <div class="cart-product-content">
+                <h4>${item.fields.title}</h4>
+                <p>€${item.fields.price.toFixed(2)}</p>
+                <p>Broj osoba: 
+                    <button class="plus-minus" data-id="${item.sys.id}" data-action="decrease">-</button>
+                    ${cartItem.quantity}
+                    <button class="plus-minus" data-id="${item.sys.id}" data-action="increase">+</button>
+                </p>
+            </div>
         `;
 
         cartContent.appendChild(cartDiv);
     });
 
-    // Setup event listeners for plus and minus buttons in the cart
     setupPlusMinusButtons();
 }
 
