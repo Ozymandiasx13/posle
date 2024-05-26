@@ -65,6 +65,7 @@ function setupCart() {
         updateCartCount();
     });
 
+    // Display cart items, update total, and update cart count
     displayCartItems();
     updateTotal();
     updateCartCount();
@@ -147,22 +148,4 @@ function updateTotal() {
 function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const numberOfItems = cart.reduce((total, item) => total + item.quantity, 0);
-    document.querySelector('.noi').textContent = numberOfItems;
-}
-
-function setupPlusMinusButtons() {
-    const plusMinusButtons = document.querySelectorAll('.plus-minus');
-
-    plusMinusButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const id = button.dataset.id;
-            const action = button.dataset.action;
-
-            if (action === 'increase') {
-                addToCart(id);
-            } else if (action === 'decrease') {
-                decreaseQuantity(id);
-            }
-        });
-    });
-}
+    document.querySelector('.noi').textContent = numberOfItems
