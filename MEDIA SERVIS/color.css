@@ -44,7 +44,6 @@ ul {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    top:2em;
 }
 
 .list-items a {
