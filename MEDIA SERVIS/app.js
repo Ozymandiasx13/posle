@@ -1,6 +1,11 @@
 let products = [];
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Ensure cart data is initialized in localStorage
+    if (!localStorage.getItem('cart')) {
+        localStorage.setItem('cart', JSON.stringify([]));
+    }
+    
     loadProducts();
     setupCart();
 });
@@ -59,17 +64,13 @@ function setupCart() {
 
     clearCartButton.addEventListener('click', () => {
         localStorage.removeItem('cart');
+        // Clear cart content, total, and cart count
         displayCartItems();
         updateTotal();
         updateCartCount();
     });
 
-    displayCartItems();
-    updateTotal();
-    updateCartCount();
-
-    // Setup cart count
-    updateCartCount();
+    // Removed displayCartItems, updateTotal, and updateCartCount from here
 
     // Setup event listeners for plus and minus buttons
     setupPlusMinusButtons();
@@ -94,36 +95,7 @@ function addToCart(id) {
     updateCartCount();
 }
 
-function removeFromCart(id) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const index = cart.findIndex(item => item.id === id);
-
-    if (index !== -1) {
-        cart.splice(index, 1);
-    }
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-    displayCartItems();
-    updateTotal();
-    updateCartCount();
-}
-
-function decreaseQuantity(id) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const index = cart.findIndex(item => item.id === id);
-
-    if (index !== -1) {
-        cart[index].quantity -= 1;
-        if (cart[index].quantity <= 0) {
-            cart.splice(index, 1);
-        }
-    }
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-    displayCartItems();
-    updateTotal();
-    updateCartCount();
-}
+// Other cart manipulation functions (removeFromCart, decreaseQuantity) should also update localStorage
 
 function displayCartItems() {
     const cartContent = document.querySelector('.cart-content');
@@ -138,7 +110,7 @@ function displayCartItems() {
             cartDiv.classList.add('cart-item');
 
             cartDiv.innerHTML = `
-                <img src="${item.fields.image && item.fields.image.fields.file.url}" alt="${item.fields.title}">
+                <img src="${item.fields.image.fields.file.url}" alt="${item.fields.title}">
                 <h4>${item.fields.title}</h4>
                 <p>€${item.fields.price.toFixed(2)}</p>
                 <p>Broj osoba: 
@@ -154,8 +126,9 @@ function displayCartItems() {
         }
     });
 
-    // Setup event listeners for plus and minus buttons in the cart
-    setupPlusMinusButtons();
+    // Update total and cart count
+    updateTotal();
+    updateCartCount();
 }
 
 function updateTotal() {
