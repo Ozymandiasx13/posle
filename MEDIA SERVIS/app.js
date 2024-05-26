@@ -59,15 +59,16 @@ function setupCart() {
 
     clearCartButton.addEventListener('click', () => {
         localStorage.removeItem('cart');
-        // Clear cart content, total, and cart count
         displayCartItems();
         updateTotal();
         updateCartCount();
     });
 
-    // Display cart items, update total, and update cart count
     displayCartItems();
     updateTotal();
+    updateCartCount();
+
+    // Setup cart count
     updateCartCount();
 
     // Setup event listeners for plus and minus buttons
@@ -132,27 +133,59 @@ function displayCartItems() {
     cart.forEach(cartItem => {
         const item = products.find(product => product.sys.id === cartItem.id);
 
-        if (item && item.fields) {
-            const cartDiv = document.createElement('div');
-            cartDiv.classList.add('cart-item');
+        const cartDiv = document.createElement('div');
+        cartDiv.classList.add('cart-item');
 
-            cartDiv.innerHTML = `
-                <img src="${item.fields.image.fields.file.url}" alt="${item.fields.title}">
-                <h4>${item.fields.title}</h4>
-                <p>€${item.fields.price.toFixed(2)}</p>
-                <p>Broj osoba: 
-                    <button class="plus-minus" data-id="${item.sys.id}" data-action="decrease">-</button>
-                    ${cartItem.quantity}
-                    <button class="plus-minus" data-id="${item.sys.id}" data-action="increase">+</button>
-                </p>
-            `;
+        cartDiv.innerHTML = `
+            <img src="${item.fields.image.fields.file.url}" alt="${item.fields.title}">
+            <h4>${item.fields.title}</h4>
+            <p>€${item.fields.price.toFixed(2)}</p>
+            <p>Broj osoba: 
+                <button class="plus-minus" data-id="${item.sys.id}" data-action="decrease">-</button>
+                ${cartItem.quantity}
+                <button class="plus-minus" data-id="${item.sys.id}" data-action="increase">+</button>
+            </p>
+        `;
 
-            cartContent.appendChild(cartDiv);
-        } else {
-            console.error('Error: Missing or invalid product data for cart item', cartItem);
-        }
+        cartContent.appendChild(cartDiv);
     });
 
-    // Update total and cart count
-    updateTotal();
-    updateCartCount();
+    // Setup event listeners for plus and minus buttons in the cart
+    setupPlusMinusButtons();
+}
+
+function updateTotal() {
+    const totalSum = document.querySelector('.total-sum span');
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let total = 0;
+
+    cart.forEach(cartItem => {
+        const item = products.find(product => product.sys.id === cartItem.id);
+        total += item.fields.price * cartItem.quantity;
+    });
+
+    totalSum.textContent = total.toFixed(2);
+}
+
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const numberOfItems = cart.reduce((total, item) => total + item.quantity, 0);
+    document.querySelector('.noi').textContent = numberOfItems;
+}
+
+function setupPlusMinusButtons() {
+    const plusMinusButtons = document.querySelectorAll('.plus-minus');
+
+    plusMinusButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const id = button.dataset.id;
+            const action = button.dataset.action;
+
+            if (action === 'increase') {
+                addToCart(id);
+            } else if (action === 'decrease') {
+                decreaseQuantity(id);
+            }
+        });
+    });
+}
