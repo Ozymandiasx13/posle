@@ -1,4 +1,4 @@
-* {
+if* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -145,7 +145,7 @@ display: inline-flex;
 .banner h1 {
     font-size: 5em;
     color: #f5efef;
-    font-family: fantasy;
+    font-family: sans-serif;
 }
 
 .banner a {
