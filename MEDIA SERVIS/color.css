@@ -77,8 +77,8 @@ ul {
     align-items: center;
     color: white;
     position: fixed;
-    top: 50px; 
-    left: 20em; 
+    top: -10px; 
+    left: -10px; 
     background-color: #e3762d;
     height: 25px;
     width: 25px;
