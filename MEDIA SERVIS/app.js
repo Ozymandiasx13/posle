@@ -91,6 +91,13 @@ function displayCartItems() {
     cartContent.innerHTML = '';
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+    // Counting the number of items in the cart
+    const numberOfItems = cart.reduce((acc, curr) => acc + curr.quantity, 0);
+
+    // Update the display of the number of items in the cart icon
+    const numberOfItemsDisplay = document.querySelector('.number-of-items .noi');
+    numberOfItemsDisplay.textContent = numberOfItems;
+
     cart.forEach(cartItem => {
         const item = products.find(product => product.sys.id === cartItem.id);
 
