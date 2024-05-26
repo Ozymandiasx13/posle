@@ -125,7 +125,10 @@ function displayCartItems() {
 
     // Update total and cart count
     updateTotal();
-    updateCartCount(); // Move the updateCartCount() call here
+    updateCartCount();
+
+    // Setup plus and minus buttons
+    setupPlusMinusButtons();
 }
 
 function updateTotal() {
