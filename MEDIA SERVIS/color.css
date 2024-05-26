@@ -316,6 +316,16 @@ ul {
     font-size: 1em;
     cursor: pointer;
     padding: 0.5em;
+    margin: 0.5em;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.plus-minus:hover {
+    background: #f0f0f0;
+}
 }
 
 .total-sum {
