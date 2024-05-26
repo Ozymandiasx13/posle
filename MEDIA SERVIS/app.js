@@ -95,6 +95,7 @@ function displayCartItems() {
     // Update the display of the number of items in the cart
     const numberOfItemsDisplay = document.querySelector('.number-of-items .noi');
     numberOfItemsDisplay.textContent = numberOfItems;
+
     cart.forEach(cartItem => {
         const item = products.find(product => product.sys.id === cartItem.id);
 
