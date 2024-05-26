@@ -154,15 +154,4 @@ function setupPlusMinusButtons() {
     const plusMinusButtons = document.querySelectorAll('.plus-minus');
 
     plusMinusButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const id = button.dataset.id;
-            const action = button.dataset.action;
-
-            if (action === 'increase') {
-                addToCart(id);
-            } else if (action === 'decrease') {
-                decreaseQuantity(id);
-            }
-        });
-    });
-}
+        button
