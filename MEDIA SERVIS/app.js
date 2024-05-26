@@ -3,6 +3,8 @@ let products = [];
 document.addEventListener("DOMContentLoaded", () => {
     loadProducts();
     setupCart();
+    displayCartItems();
+    updateTotal();
 });
 
 async function loadProducts() {
@@ -27,7 +29,6 @@ async function loadProducts() {
         productContainer.appendChild(productDiv);
     });
 
-    // Setup event listeners for the "Add to Cart" buttons
     setupAddToCartButtons();
 }
 
@@ -54,6 +55,7 @@ function setupCart() {
     document.querySelector('.fa-shopping-cart').addEventListener('click', () => {
         cartSidebar.style.transform = 'translateX(0)';
         displayCartItems();
+        updateTotal();
     });
 
     clearCartButton.addEventListener('click', () => {
@@ -62,7 +64,6 @@ function setupCart() {
         updateTotal();
     });
 
-    // Display the cart items and update the total on initial load
     displayCartItems();
     updateTotal();
 }
@@ -108,7 +109,6 @@ function displayCartItems() {
         cartContent.appendChild(cartDiv);
     });
 
-    // Add event listeners for the plus and minus buttons
     document.querySelectorAll('.plus-minus').forEach(button => {
         button.addEventListener('click', (event) => {
             const id = button.dataset.id;
@@ -148,8 +148,3 @@ function updateTotal() {
 
     totalSum.textContent = total.toFixed(2);
 }
-
-// Ensure the total is updated when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-    setupCart();
-});
