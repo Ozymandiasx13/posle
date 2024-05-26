@@ -20,13 +20,14 @@ ul {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
     height: 10vh;
     background-color: darkcyan;
 }
 
 .logo {
     padding-left: 2em;
+    padding-top: 2em;
 }
 
 .logo-text {
@@ -36,6 +37,7 @@ ul {
 .menubar {
     width: 50%;
     margin-left: 30em;
+    margin-top: 4em;
 }
 
 .list {
@@ -52,6 +54,8 @@ ul {
     background: #733d1300;
     font-size: 1.1em;
     transition: 0.4s;
+    position: relative;
+    bottom: 120%;
 }
 
 .list-items a:hover {
@@ -59,30 +63,39 @@ ul {
 }
 
 .cart {
+    padding-right: 1em;
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 0;
+    right: 0;
     z-index: 100;
 }
 
 .number-of-items {
-    position: absolute;
-    top: -10px;
-    right: -10px;
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
-    background-color: #e3762d;
     color: white;
-    border-radius: 50%;
-    font-size: 0.8em;
+    position: fixed;
+    top: 50px; 
+    left: 20em; 
+    background-color: #e3762d;
+    height: 25px;
+    width: 25px;
+    border-radius: 7px;
+    z-index: 1;
+}
+
+.number-of-items .noi {
+    font-size: 0.7em;
 }
 
 .fa-shopping-cart {
     font-size: 2em;
     cursor: pointer;
+    position: fixed;
+    right: 500px;
+    top: 50px;
 }
 
 .burger {
@@ -102,6 +115,9 @@ ul {
     height: calc(100vh - 10vh);
     width: 100%;
     background: url("fotke/warped-space-1920x1080 (1).jpg") center center/cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .section1 .banner {
@@ -112,7 +128,7 @@ ul {
     left: 50%;
     transform: translate(-50%, -50%);
     position: relative;
-    display: flex;
+    justify-content: space-around;
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -146,28 +162,33 @@ ul {
     height: calc(100vh - 40vh);
 }
 
-.section2 .title {
+.section2.title {
     height: 40px;
+    position: relative;
     text-align: center;
     background-color: darkcyan;
 }
 
 .section2 .title h1 {
+    text-align: center;
+    font: 10em;
     color: #f5efef;
-    font-size: 2em;
+    background-color: darkcyan;
 }
 
 .products {
     margin: 0.3em auto;
     max-width: 1300px;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 .product-container {
     display: flex;
     flex-wrap: wrap;
+    top: 1em;
     justify-content: space-around;
+    align-items: flex-start;
 }
 
 .product-card {
@@ -180,16 +201,17 @@ ul {
     padding: 1em;
     background-color: darkcyan;
     border-radius: 2px;
-    text-align: center;
 }
 
 .product-name {
     margin-top: 1em;
+    text-align: center;
     color: white;
 }
 
 .product-pricing {
     margin-top: 1em;
+    text-align: center;
     color: white;
 }
 
@@ -211,7 +233,8 @@ ul {
 .products-card img {
     height: 300px;
     width: 300px;
-    border: 2px solid darkcyan;
+    border: 2px;
+    border-color: darkcyan;
     transition: 0.3s linear;
 }
 
@@ -224,6 +247,7 @@ ul {
     background-color: rgb(0, 88, 139);
 }
 
+/* Menubar */
 .menu-sidebar {
     display: none;
 }
@@ -247,7 +271,7 @@ ul {
     color: black;
     padding: 1em;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     left: 8em;
     top: 0.1em;
     z-index: 11;
@@ -272,13 +296,7 @@ ul {
     margin-right: 40px;
 }
 
-.cart-item {
-    display: flex;
-    margin-bottom: 20px;
-    align-items: center;
-}
-
-.cart-item img {
+.cart-product .product img {
     width: 130px;
     height: 90px;
 }
@@ -297,68 +315,85 @@ ul {
     color: black;
     font-size: 1em;
     cursor: pointer;
-    background: transparent;
-    border: none;
-    padding: 0 0.5em;
-    user-select: none;
+    padding: 0.5em;
+    margin: 0.5em;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.plus-minus:hover {
+    background: #f0f0f0;
 }
 
 .total-sum {
-    font-size: 1.5em;
-    margin-top: 2em;
-    text-align: right;
-    padding-right: 2em;
+    position: left;
+    text-align: center;
+    margin: 1em 0 0.5em 0;
+    background: #079e9e;
+    padding: 1em;
+    color: white;
 }
 
 .clear-cart {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    text-align: center;
 }
 
-.btn {
-    background-color: darkred;
+.clear-cart .btn {
+    background-color: darkcyan;
     color: white;
-    border: none;
-    padding: 0.5em 1em;
+    border: 1px solid black;
+    padding: 1em 0.7em;
+    height: 3em;
     cursor: pointer;
+    transition: 0.3s linear;
 }
 
-.btn:hover {
-    background-color: red;
+.clear-cart .btn:hover {
+    border: 1px solid darkcyan;
+    background: darkcyan;
+    color: rgb(0, 79, 139);
 }
 
 .continue-cart {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    position: relative;
+    top: 2em;
 }
 
 .overlay {
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
     z-index: 9;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0.3;
+    transition: all 0.3s linear;
+}
+
+.none {
     display: none;
 }
 
-.overlay.active {
-    display: block;
-}
-
-/* Responsive Design */
 @media screen and (max-width: 768px) {
-    .section2 {
-        height: auto;
+    .logo {
+        padding-left: 0;
     }
-    .product-card {
-        width: 100%;
+    .cart {
+        padding-right: 2em;
     }
-    .product-container {
-        flex-direction: column;
-        align-items: center;
+    .menubar {
+        display: none;
     }
-}
+    .burger {
+        margin-left: 2em;
+        display: block;
+    }
+    .section1 .banner h1 {
+        font-size: 1.5em;
+    }
+    .banner a {
+        font-size: 0.6em;
+        padding: 1
