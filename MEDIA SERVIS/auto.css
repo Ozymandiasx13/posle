@@ -320,6 +320,7 @@ display: inline-flex;
     font-size: 1em;
     cursor: pointer;
     padding: 0.5em;
+    heigh:20px;
 }
 
 .total-sum {
