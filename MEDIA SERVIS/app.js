@@ -93,7 +93,36 @@ function addToCart(id) {
     updateCartCount();
 }
 
-// Other cart manipulation functions (removeFromCart, decreaseQuantity) should also update localStorage
+function removeFromCart(id) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const index = cart.findIndex(item => item.id === id);
+
+    if (index !== -1) {
+        cart.splice(index, 1);
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayCartItems();
+    updateTotal();
+    updateCartCount();
+}
+
+function decreaseQuantity(id) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const index = cart.findIndex(item => item.id === id);
+
+    if (index !== -1) {
+        cart[index].quantity -= 1;
+        if (cart[index].quantity <= 0) {
+            cart.splice(index, 1);
+        }
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayCartItems();
+    updateTotal();
+    updateCartCount();
+}
 
 function displayCartItems() {
     const cartContent = document.querySelector('.cart-content');
@@ -127,25 +156,3 @@ function displayCartItems() {
     // Update total and cart count
     updateTotal();
     updateCartCount();
-
-    // Setup plus and minus buttons
-    setupPlusMinusButtons();
-}
-
-function updateTotal() {
-    const totalSum = document.querySelector('.total-sum span');
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let total = 0;
-
-    cart.forEach(cartItem => {
-        const item = products.find(product => product.sys.id === cartItem.id);
-        total += item.fields.price * cartItem.quantity;
-    });
-
-    totalSum.textContent = total.toFixed(2);
-}
-
-function updateCartCount() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const numberOfItems = cart.reduce((total, item) => total + item.quantity, 0);
-    document.querySelector('.noi').textContent = numberOfItems
