@@ -133,21 +133,25 @@ function displayCartItems() {
     cart.forEach(cartItem => {
         const item = products.find(product => product.sys.id === cartItem.id);
 
-        const cartDiv = document.createElement('div');
-        cartDiv.classList.add('cart-item');
+        if (item && item.fields) {
+            const cartDiv = document.createElement('div');
+            cartDiv.classList.add('cart-item');
 
-        cartDiv.innerHTML = `
-            <img src="${item.fields.image.fields.file.url}" alt="${item.fields.title}">
-            <h4>${item.fields.title}</h4>
-            <p>€${item.fields.price.toFixed(2)}</p>
-            <p>Broj osoba: 
-                <button class="plus-minus" data-id="${item.sys.id}" data-action="decrease">-</button>
-                ${cartItem.quantity}
-                <button class="plus-minus" data-id="${item.sys.id}" data-action="increase">+</button>
-            </p>
-        `;
+            cartDiv.innerHTML = `
+                <img src="${item.fields.image && item.fields.image.fields.file.url}" alt="${item.fields.title}">
+                <h4>${item.fields.title}</h4>
+                <p>€${item.fields.price.toFixed(2)}</p>
+                <p>Broj osoba: 
+                    <button class="plus-minus" data-id="${item.sys.id}" data-action="decrease">-</button>
+                    ${cartItem.quantity}
+                    <button class="plus-minus" data-id="${item.sys.id}" data-action="increase">+</button>
+                </p>
+            `;
 
-        cartContent.appendChild(cartDiv);
+            cartContent.appendChild(cartDiv);
+        } else {
+            console.error('Error: Missing or invalid product data for cart item', cartItem);
+        }
     });
 
     // Setup event listeners for plus and minus buttons in the cart
