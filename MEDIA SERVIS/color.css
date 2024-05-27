@@ -296,7 +296,7 @@ ul {
 
 .cart-product .product img {
     width: 150px;
-    height: 90px;
+    height: 120px;
 }
 
 .cart-product-content {
@@ -305,6 +305,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     margin-left: 1em;
+    margin-top: 1em;
     height: 90px;
 }
 
