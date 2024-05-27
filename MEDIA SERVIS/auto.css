@@ -118,7 +118,6 @@ ul {
 }
 .section-container{
 display: inline-flex;
-    margin-top:1.5em;
 }
 .section1 {
     height: calc(100vh - 10vh);
