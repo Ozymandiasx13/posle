@@ -118,6 +118,7 @@ ul {
 }
 .section-container{
 display: inline-flex;
+    margin-top:1.5em;
 }
 .section1 {
     height: calc(100vh - 10vh);
@@ -129,8 +130,8 @@ display: inline-flex;
 }
 
 .section1 .banner {
-    height: 200px;
-    width: 600px;
+    height: 100px;
+    width: 300px;
     background: transparent;
     top: 50%;
     left: 50%;
