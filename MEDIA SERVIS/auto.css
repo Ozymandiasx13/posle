@@ -173,7 +173,7 @@ display: inline-flex;
 }
 
 .section2.title {
-    height: 2em;
+    height: 3em;
     font-size: large;
     position: relative;
     text-align: center;
@@ -182,7 +182,7 @@ display: inline-flex;
 
 .section2 .title h1 {
     text-align: center;
-    font-size: 0.5em;
+    font-size: 1em;
     color: BLACK;
     background-color: darkcyan;
 }
