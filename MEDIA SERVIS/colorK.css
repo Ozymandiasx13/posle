@@ -18,11 +18,12 @@ ul {
 }
 
 .navbar {
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     align-items: right;
     height: 10vh;
     background-color: darkcyan;
+    width:100%
 }
 
 .logo {
@@ -37,7 +38,6 @@ ul {
 .menubar {
     width: 100%;
     margin-left: 1em;
-    margin-top: 2.5em;
     display: inline-flex
 }
 
@@ -45,6 +45,8 @@ ul {
     display: inline-flex;
     justify-content: space-between;
     flex-direction: row;
+    margin-left: 15em;
+    margin-bottom:2em;
 }
 
 .list-items a {
@@ -62,6 +64,7 @@ ul {
 .list-items a:hover {
     background-color: rgb(8, 77, 157);
 }
+
 
 .cart{
     padding-right: 1em;
