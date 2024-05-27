@@ -314,6 +314,7 @@ ul {
     font-size: 1em;
     cursor: pointer;
     padding: 0.5em;
+     justify-content: space-between;
 }
 
 .total-sum {
