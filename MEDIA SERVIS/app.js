@@ -4,32 +4,39 @@ document.addEventListener("DOMContentLoaded", () => {
     loadProducts();
     setupCart();
     updateTotal();
-    updateCartCount();
+    updateCartCount(); // Ensure this is called on page load
 });
 
 async function loadProducts() {
     const productContainer = document.querySelector('.product-container');
-    const response = await fetch('products.json');
-    const data = await response.json();
-    products = data.items;
+    try {
+        const response = await fetch('products.json');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        products = data.items;
 
-    products.forEach(item => {
-        const productDiv = document.createElement('div');
-        productDiv.classList.add('product-card');
+        products.forEach(item => {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('product-card');
 
-        productDiv.innerHTML = `
-            <div class="product-content">
-                <img src="${item.fields.image.fields.file.url}" alt="${item.fields.title}">
-                <h3 class="product-name">${item.fields.title}</h3>
-                <p class="product-pricing">Cijena po osobi ${item.fields.price.toFixed(2)}€</p>
-            </div>
-            <button class="add-to-cart" data-id="${item.sys.id}">Dodaj u Košaricu</button>
-        `;
+            productDiv.innerHTML = `
+                <div class="product-content">
+                    <img src="${item.fields.image.fields.file.url}" alt="${item.fields.title}">
+                    <h3 class="product-name">${item.fields.title}</h3>
+                    <p class="product-pricing">Cijena po osobi ${item.fields.price.toFixed(2)}€</p>
+                </div>
+                <button class="add-to-cart" data-id="${item.sys.id}">Dodaj u Košaricu</button>
+            `;
 
-        productContainer.appendChild(productDiv);
-    });
+            productContainer.appendChild(productDiv);
+        });
 
-    setupAddToCartButtons();
+        setupAddToCartButtons();
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
 }
 
 function setupAddToCartButtons() {
