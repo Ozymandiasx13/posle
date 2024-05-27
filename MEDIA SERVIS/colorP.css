@@ -62,7 +62,7 @@ ul {
 .list-items a:hover {
     background-color: rgb(8, 77, 157);
 }
-}
+
 .cart{
     display: none;
     padding-right: 1em;
