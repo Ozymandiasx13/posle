@@ -4,9 +4,7 @@
             loadProducts();
             setupCart();
             updateTotal();
-            updateCartCount(); // Ensure this is called on page load
-        });
-
+            updateCartCount();
         async function loadProducts() {
             const productContainer = document.querySelector('.product-container');
             try {
@@ -166,7 +164,7 @@
         function updateCartCount() {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
             const numberOfItems = cart.reduce((total, item) => total + item.quantity, 0);
-            document.querySelector('.noi').textContent = numberOfItems;
+            document.querySelector('.noi').textContent = number-Of-Items;
         }
 
         function setupPlusMinusButtons() {
