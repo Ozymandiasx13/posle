@@ -45,7 +45,8 @@ ul {
     display: inline-flex;
     justify-content: space-between;
     flex-direction: row;
-    margin-left: 50em;
+    margin-left: 15em;
+    margin-bottom:2em;
 }
 
 .list-items a {
