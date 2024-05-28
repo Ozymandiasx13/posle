@@ -191,6 +191,7 @@ ul {
     justify-content: space-around;
     align-items: flex-start;
     background-color: darkcyan;
+    width:100%;
 }
 
 .product-card {
