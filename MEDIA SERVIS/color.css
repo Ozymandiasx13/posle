@@ -162,7 +162,6 @@ ul {
 .section2 {
     background-color: darkcyan;
     height: calc(100vh - 40vh);
-    width:100%;
 }
 
 .section2.title {
@@ -192,7 +191,6 @@ ul {
     justify-content: space-around;
     align-items: flex-start;
     background-color: darkcyan;
-    width:100%;
 }
 
 .product-card {
