@@ -81,18 +81,18 @@ ul {
     top: 50px;
     right: 490px;
     background-color: #e3762d;
-    height: 12px;
-    width: 12px;
+    height: 16px;
+    width: 16px;
     border-radius: 5px;
     z-index: 1;
 }
 
 .number-of-items .noi {
-    font-size: 0.3em;
+    font-size: 0.7em;
 }
 
 .fa-shopping-cart {
-    font-size: 1em;
+    font-size: 3em;
     cursor: pointer;
     position: fixed;
     right:500px;
