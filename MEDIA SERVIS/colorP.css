@@ -37,7 +37,7 @@ ul {
 
 .menubar {
     width: 100%;
-    margin-bottom:2em;
+    padding-bottom:2em;
     display: inline-flex
 
 }
