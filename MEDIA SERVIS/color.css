@@ -299,11 +299,14 @@ ul {
 .cart-content {
     margin-top: 20px;
   width: 250px;
+    margin-bottom: 0.5em;
 }
 
 .cart-product .product img {
     width: 30px;
     height: 30px;
+     margin-top:1em;
+    margin-bottom: 0.5em;
 }
 
 .cart-product-content {
@@ -315,6 +318,8 @@ ul {
     height: 20px;
     width:40px;
     padding:2em;
+     margin-top:1em;
+    margin-bottom: 0.5em;
 }
 
 .plus-minus {
@@ -323,6 +328,7 @@ ul {
     font-size: 0.5em;
     cursor: pointer;
     padding: 1em;
+    margin-top:1em;
     margin-bottom: 0.5em;
     position:relative;
 }
