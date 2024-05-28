@@ -18,12 +18,11 @@ ul {
 }
 
 .navbar {
-    display: inline-flex;
+    display:flex;
     justify-content: space-between;
     align-items: right;
     height: 10vh;
     background-color: darkcyan;
-    width:100%
 }
 
 .logo {
