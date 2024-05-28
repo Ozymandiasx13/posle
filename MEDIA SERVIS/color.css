@@ -236,8 +236,8 @@ ul {
 }
 
 .products-card img {
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     border: 2px;
     border-color: darkcyan;
     transition: 0.3s linear;
@@ -269,7 +269,7 @@ ul {
     transition: all 0.3s linear;
     transform: translateX(100%);
     overflow: scroll;
-    align-items: center;
+    align-items: left;
 }
 
 .cart-sidebar .close-cart {
