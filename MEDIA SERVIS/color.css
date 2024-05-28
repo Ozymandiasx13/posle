@@ -316,7 +316,7 @@ ul {
     align-items: right;
     height: 80px;
     width:80px;
-    padding:2em;
+    padding:1em;
      margin-top:1em;
     margin-bottom: 0.5em;
 }
@@ -326,8 +326,8 @@ ul {
     color: black;
     font-size: 0.3em;
     cursor: pointer;
-    padding: 1em;
-    margin-top:1em;
+    padding: 0.5em;
+    margin-top:0.5em;
     margin-bottom: 0.5em;
 }
 
