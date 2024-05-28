@@ -36,9 +36,10 @@ ul {
 
 .menubar {
     width: 100%;
-    margin-left: 1em;
-    margin-top: 3em;
     display: inline-flex
+    positon:relative;
+    margin-top:0.3em;
+
 }
 
 .list {
