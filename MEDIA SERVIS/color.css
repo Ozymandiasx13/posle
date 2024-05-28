@@ -327,8 +327,9 @@ ul {
     font-size: 0.3em;
     cursor: pointer;
     padding: 0.5em;
-    margin-top:0.5em;
-    margin-bottom: 0.5em;
+    margin-top:1em;
+    margin-bottom: 1em;
+    width:100%;
 }
 
 .total-sum {
