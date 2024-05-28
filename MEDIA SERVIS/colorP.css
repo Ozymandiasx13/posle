@@ -120,7 +120,7 @@ border-radius: 7px;
     height: calc(100vh - 50vh);
     width: 50%;
     background: url("FotkeP/Pandora2.jpg") center center/cover;
-    border:1px solid darkcyan;
+    border:5px solid darkcyan;
     top:0;
     left:0;
     z-index: 8;
@@ -128,7 +128,7 @@ border-radius: 7px;
 }
 .section1 .banner{
 height: 100px;
-width: 200px;
+width: 300px;
 background:rgba(255, 255, 255, 0,7);
 top: 50%;
 left: 50%;
@@ -147,7 +147,7 @@ z-index:  8;
     width: 50%;
     position: relative;
     background: url("FotkeP/Corusant2.jpg") center center/cover;
-    border: 1px solid darkcyan;
+    border: 5px solid darkcyan;
     top:0;
     left:0%;
     z-index: 8;
@@ -155,7 +155,7 @@ z-index:  8;
 }
 .section3 .banner{
 height: 100px;
-width: 200px;
+width: 300px;
 background:rgba(255, 255, 255, 0,7);
 top: 50%;
 left:50%;
@@ -181,7 +181,7 @@ z-index:  8;
 }
 .section4 .banner{
 height: 100px;
-width: 200px;
+width: 300px;
 background:rgba(255, 255, 255, 0,7);
 top: 50%;
 left: 50%;
@@ -200,7 +200,7 @@ z-index:  8;
     position: inherit;
     height: calc(100vh - 50vh);
     width: 50%;
-    border: 1px solid darkcyan;
+    border: 5px solid darkcyan;
     background: url("FotkeP/Naboo.webp") center center/cover;
     top:0;
     left:0;
@@ -208,7 +208,7 @@ z-index:  8;
     
 .section5 .banner{
 height: 100px;
-width: 200px;
+width: 300px;
 background:rgba(255, 255, 255, 0,7);
 top: 50%;
 left: 50%;
