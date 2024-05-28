@@ -314,6 +314,7 @@ ul {
     margin-left: 4em;
     height: 20px;
     width:40px;
+    padding:1em;
 }
 
 .plus-minus {
@@ -321,7 +322,7 @@ ul {
     color: black;
     font-size: 0.5em;
     cursor: pointer;
-    padding: 0.5em;
+    padding: 1em;
     margin-bottom: 0.5em;
 }
 
