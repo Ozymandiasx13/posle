@@ -314,8 +314,8 @@ ul {
     flex-direction: column;
     justify-content: space-between;
     align-items: right;
-    height: 80px;
-    width:80px;
+    height: 100px;
+    width:100%;
     padding:1em;
      margin-top:1em;
     margin-bottom: 0.5em;
