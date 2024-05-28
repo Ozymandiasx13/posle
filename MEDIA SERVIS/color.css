@@ -314,7 +314,7 @@ ul {
     margin-left: 4em;
     height: 20px;
     width:40px;
-    padding:1em;
+    padding:2em;
 }
 
 .plus-minus {
@@ -324,6 +324,7 @@ ul {
     cursor: pointer;
     padding: 1em;
     margin-bottom: 0.5em;
+    position:relative;
 }
 
 .total-sum {
@@ -334,6 +335,7 @@ ul {
     background: #079e9e;
     padding: 1em;
     color: white;
+    position:relative;
 }
 
 .clear-cart {
@@ -348,6 +350,7 @@ ul {
     height: 3em;
     cursor: pointer;
     transition: 0.3s linear;
+    position:relative;
 
 }
 .continue-cart{
