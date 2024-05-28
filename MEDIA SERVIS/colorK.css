@@ -127,7 +127,7 @@ border-radius: 7px;
 }
 .section1 .banner{
 height: 100px;
-width: 300px;
+width: 350px;
 background:rgba(255, 255, 255, 0,7);
 top: 50%;
 left: 50%;
@@ -154,7 +154,7 @@ z-index:  8;
 }
 .section3 .banner{
 height: 100px;
-width: 300px;
+width: 350px;
 background:rgba(255, 255, 255, 0,7);
 top: 50%;
 left:50%;
@@ -180,7 +180,7 @@ z-index:  8;
 }
 .section4 .banner{
 height: 100px;
-width: 300px;
+width: 350px;
 background:rgba(255, 255, 255, 0,7);
 top: 50%;
 left: 50%;
@@ -207,7 +207,7 @@ z-index:  8;
     
 .section5 .banner{
 height: 100px;
-width: 300px;
+width: 350px;
 background:rgba(255, 255, 255, 0,7);
 top: 50%;
 left: 50%;
@@ -221,7 +221,7 @@ font-family: sans-serif;
 z-index:  8;
 }
 .banner h1 {
-    font-size: 1.5em;
+    font-size: 1em;
     color: #f5efef;
     font-family: verdana;
 }
