@@ -23,6 +23,7 @@ ul {
     align-items: right;
     height: 10vh;
     background-color: darkcyan;
+    flex-direction:row;
 }
 
 .logo {
@@ -38,6 +39,7 @@ ul {
     width: 100%;
     margin-bottom:2em;
     display: inline-flex
+
 }
 
 .list {
