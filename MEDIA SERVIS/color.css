@@ -77,7 +77,7 @@ ul {
     justify-content: center;
     align-items: center;
     color: white;
-    position: fixed;
+    position: absolute;
     top: 50px;
     right: 490px;
     background-color: #e3762d;
@@ -94,7 +94,7 @@ ul {
 .fa-shopping-cart {
     font-size: 2em;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     right:500px;
     top :50px;
 }
