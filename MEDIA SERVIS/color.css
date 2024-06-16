@@ -71,7 +71,7 @@ ul {
     z-index: 100
 }
 
-.cart .number-of-items {
+.number-of-items {
     display: flex;
     cursor: pointer;
     justify-content: center;
