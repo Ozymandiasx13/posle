@@ -31,7 +31,7 @@
       {
         "sys": { "id": "3" },
         "fields": {
-          "title": "Krstarenje Haleyevim putem u Titaniku x7",
+          "title": "Krstarenje Haleyevim",
           "price": 16000.00,
           "image": {
             "fields": {
@@ -45,7 +45,7 @@
       {
         "sys": { "id": "4" },
         "fields": {
-          "title": " BarKlin svemirski hotel s 12 zvjezdica",
+          "title": "Odmor nad zemljom hotel s 12*",
           "price": 8000.00,
           "image": {
             "fields": {
