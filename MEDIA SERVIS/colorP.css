@@ -22,7 +22,7 @@ ul {
     justify-content: space-between;
     align-items: right;
     height: 10vh;
-    background-color: darkcyan;
+    background-color: rgb(2, 51, 66);
     flex-direction:row;
 }
 
@@ -52,15 +52,15 @@ ul {
 }
 
 .list-items a {
-    padding: 1em;
+    padding: 1.5em;
     color: rgb(254, 254, 254);
     border: 1px solid black;
     font-family: sans-serif;
     background: #733d1300;
-    font-size: 0.5em;
+    font-size: 0.7em;
     transition: 0.4s;
     position: relative;
-    bottom: 120%;
+    top: -0.3em;
 }
 
 .list-items a:hover {
@@ -123,7 +123,7 @@ border-radius: 7px;
     height: calc(100vh - 50vh);
     width: 50%;
     background: url("FotkeP/Pandora2.jpg") center center/cover;
-    border:5px solid darkcyan;
+    border:3px solid rgb(2, 51, 66);
     top:0;
     left:0;
     z-index: 8;
@@ -150,7 +150,7 @@ z-index:  8;
     width: 50%;
     position: relative;
     background: url("FotkeP/Corusant2.jpg") center center/cover;
-    border: 5px solid darkcyan;
+    border: 3px solid rgb(2, 51, 66);;
     top:0;
     left:0%;
     z-index: 8;
@@ -175,7 +175,7 @@ z-index:  8;
     float: left;
     height:calc(100vh - 50vh);
     width: 50%;
-    border: 5px solid darkcyan;
+    border: 3px solid rgb(2, 51, 66);;
     position: relative;
     background: url("FotkeP/Kamino2.jpg") center center/cover;
     top:0;
@@ -203,7 +203,7 @@ z-index:  8;
     position: inherit;
     height: calc(100vh - 50vh);
     width: 50%;
-    border: 5px solid darkcyan;
+    border: 3px solid rgb(2, 51, 66);
     background: url("FotkeP/Naboo.webp") center center/cover;
     top:0;
     left:0;
