@@ -272,6 +272,7 @@ ul {
     width: 400px;
     height: 100vh;
     z-index: 10;
+    font-size: 1.1;
     transition: all 0.3s linear;
     transform: translateX(100%);
     overflow: scroll;
@@ -299,22 +300,23 @@ ul {
     position: fixed;
     text-align: left;
     width: 100%;
-    margin-bottom: 4em;
-    font-size: 1.1em;
+    margin-bottom: 6em;
     font-family: verdana;
 }
 
-.cart-content {
-    margin-top: 20px;
-  width: 100%;
-    margin-bottom: 0.5em;
-}
 
+.cart-content {
+    margin-top: 40px;
+   max-width: 500px;
+    margin-bottom: 0.8em;
+    align-items: center;
+}
 .cart-product .product img {
-    width: 30px;
-    height: 30px;
+   width:30px;
+    max-height: 30px;
      margin-top:1em;
     margin-bottom: 0.5em;
+    align-self: center;
 }
 
 .cart-product-content {
