@@ -275,7 +275,7 @@ ul {
     transition: all 0.3s linear;
     transform: translateX(100%);
     overflow: scroll;
-    align-items: left;
+    align-items: center;
 }
 
 .cart-sidebar .close-cart {
