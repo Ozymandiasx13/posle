@@ -22,7 +22,7 @@ ul {
     justify-content: space-between;
     align-items: right;
     height: 10vh;
-    background-color: darkcyan;
+    background-color: rgb(2, 51, 66);
 }
 
 .logo {
@@ -120,7 +120,7 @@ ul {
     height: calc(100vh - 10vh);
     width: 50%;
     background: url("FotkeP/Planets.avif") center center/cover;
-    border:5px solid darkcyan;
+    border:5px solid rgb(2, 51, 66);
     top:0;
     left:0;
     z-index: 8;
@@ -147,7 +147,7 @@ z-index:  8;
     width: 50%;
     position: relative;
     background: url("FotkeK/Kruzer.webp") center center/cover;
-    border: 5px solid darkcyan;
+    border: 5px solid rgb(2, 51, 66);
     top:0;
     left:0%;
     z-index: 8;}
