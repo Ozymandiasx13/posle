@@ -194,7 +194,7 @@ ul {
 }
 
 .product-card {
-    max-width: 350px;
+    width: 400px;
     padding: 0.3em;
     border: 2px #000000;
     margin-bottom: 60px;
@@ -207,6 +207,8 @@ ul {
     padding: 1em;
     background-color: rgb(2, 51, 66);
     border-radius: 2px;
+    border: 3px solid black;
+
 }
 
 .product-name {
