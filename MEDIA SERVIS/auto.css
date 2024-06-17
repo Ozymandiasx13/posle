@@ -22,7 +22,7 @@ ul {
     justify-content: space-between;
     align-items: right;
     height: 10vh;
-    background-color: darkcyan;
+    background-color: rgb(2, 51, 66);
     width:100%
 }
 
@@ -37,8 +37,8 @@ ul {
 
 .menubar {
     width: 100%;
-    display: inline-flex
-    positon:relative;
+    display: inline-flex;
+    position:relative;
     margin-top:0.3em;
 
 }
@@ -52,12 +52,12 @@ ul {
 }
 
 .list-items a {
-    padding: 1em;
+    padding: 1.5em;
     color: rgb(254, 254, 254);
     border: 1px solid black;
     font-family: sans-serif;
     background: #733d1300;
-    font-size: 0.5em;
+    font-size: 0.7em;
     transition: 0.4s;
     position: relative;
     bottom: 120%;
@@ -159,7 +159,7 @@ display: inline-flex;
     padding: 1em 2.5em;
     font-size: 0.1em;
     color: antiquewhite;
-    background: #256c74;
+    background: rgb(2, 51, 66);
     transition: all 0.3s;
 }
 
@@ -168,7 +168,7 @@ display: inline-flex;
 }
 
 .section2 {
-    background-color: darkcyan;
+    background-color: rgb(2, 51, 66);
     height: calc(100vh - 10vh);
     width: 40%;
 }
@@ -184,8 +184,9 @@ display: inline-flex;
 .section2 .title h1 {
     text-align: center;
     font-size: 1em;
-    color: BLACK;
-    background-color: darkcyan;
+    color: rgb(235, 239, 243);
+    font-family: calibri-body;
+    background-color: rgb(2, 51, 66);
 }
 .products {
     margin: 0.3em auto;
@@ -325,7 +326,7 @@ display: inline-flex;
     font-size: 1em;
     cursor: pointer;
     padding: 0.5em;
-    heigh:20px;
+    height:20px;
 }
 
 .total-sum {
