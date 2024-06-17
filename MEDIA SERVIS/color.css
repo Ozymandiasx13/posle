@@ -306,14 +306,14 @@ ul {
 
 
 .cart-content {
-    margin-top: 30px;
+    margin-top: 40px;
    max-width: 500px;
     margin-bottom: 0.7em;
     align-items: center;
     text-align: center;
 }
 .cart-product .product img {
-   width:30px;
+   max-width:30px;
     max-height: 30px;
      margin-top:1em;
     margin-bottom: 0.5em;
@@ -339,7 +339,7 @@ ul {
     cursor: pointer;
     padding: 0.6em;
     margin-top:1em;
-    margin-bottom: 3em;
+    margin-bottom:20px;
 }
 
 .total-sum {
