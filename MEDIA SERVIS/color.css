@@ -314,7 +314,7 @@ ul {
 }
 .cart-product .product img {
    width:30px;
-    max-height: 30px;
+   height: 30px;
      margin-top:1em;
     margin-bottom: 0.5em;
     align-self: center;
