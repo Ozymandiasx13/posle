@@ -128,7 +128,7 @@ border-radius: 7px;
 .section1 .banner{
 height: 100px;
 width: 350px;
-background:rgba(2, 51, 66, 0.664));
+background:rgba(2, 51, 66, 0.664);
 top: 50%;
 left: 50%;
 transform: translate(-50%,-50%);
