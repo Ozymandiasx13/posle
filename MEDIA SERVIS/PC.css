@@ -127,7 +127,7 @@ ul {
     
 }
 .section1 .banner{
-height: 200px;
+height: 100px;
 width: 600px;
 background:rgba(2, 51, 66, 0.664);
 top: 50%;
@@ -152,7 +152,7 @@ z-index:  8;
     left:0%;
     z-index: 8;}
 .section2 .banner{
-        height: 200px;
+        height: 100px;
         width: 600px;
         background:rgba(2, 51, 66, 0.664);
         top: 50%;
