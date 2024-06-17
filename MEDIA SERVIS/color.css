@@ -22,7 +22,7 @@ ul {
     justify-content: space-between;
     align-items: right;
     height: 10vh;
-    background-color: darkcyan;
+    background-color: rgb(2, 51, 66);
 }
 
 .logo {
@@ -160,7 +160,7 @@ ul {
 }
 
 .section2 {
-    background-color: darkcyan;
+    background-color:rgb(2, 51, 66);
     height: calc(100vh - 40vh);
 }
 
@@ -168,14 +168,14 @@ ul {
     height: 40px;
     position: relative;
     text-align: center;
-    background-color: darkcyan;
+    background-color:rgb(2, 51, 66);
 }
 
 .section2 .title h1 {
     text-align: center;
     font: 10em;
     color: #f5efef;
-    background-color: darkcyan;
+    background-color: rgb(2, 51, 66);
 }
 
 .products {
@@ -190,7 +190,7 @@ ul {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
-    background-color: darkcyan;
+    background-color: rgb(2, 51, 66);
 }
 
 .product-card {
@@ -202,7 +202,7 @@ ul {
 
 .product-content {
     padding: 1em;
-    background-color: darkcyan;
+    background-color: rgb(2, 51, 66);
     border-radius: 2px;
 }
 
@@ -239,7 +239,7 @@ ul {
     height: 90px;
     width: 90px;
     border: 2px;
-    border-color: darkcyan;
+    border-color: rgb(2, 51, 66);
     transition: 0.3s linear;
 }
 
