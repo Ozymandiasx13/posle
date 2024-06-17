@@ -310,6 +310,7 @@ ul {
    max-width: 500px;
     margin-bottom: 0.8em;
     align-items: center;
+    text-align: center;
 }
 .cart-product .product img {
    width:30px;
