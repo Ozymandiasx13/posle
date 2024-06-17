@@ -48,12 +48,12 @@ ul {
 }
 
 .list-items a {
-    padding: 1em;
+    padding: 1.5em;
     color: rgb(254, 254, 254);
     border: 1px solid black;
     font-family: sans-serif;
     background: #733d1300;
-    font-size: 0.5em;
+    font-size: 0.7em;
     transition: 0.4s;
     position: relative;
     bottom: 120%;
