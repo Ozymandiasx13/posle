@@ -333,7 +333,7 @@ ul {
 }
 
 .plus-minus {
-    display: inline-flex;
+    display: relative;
     color: black;
     font-size: 0.7em;
     cursor: pointer;
