@@ -36,8 +36,8 @@ ul {
 
 .menubar {
     width: 100%;
-    display: inline-flex
-    positon:relative;
+    display: inline-flex;
+    position:relative;
     margin-top:0.3em;
 
 }
