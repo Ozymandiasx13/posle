@@ -306,10 +306,11 @@ ul {
 
 
 .cart-content {
-    margin-top:30px;
+    margin-top:50px;
    max-width: 500px;
     margin-bottom:1em;
     align-items: center;
+    justify-content: space-between;
     text-align: center;
 }
 .cart-product .product img {
